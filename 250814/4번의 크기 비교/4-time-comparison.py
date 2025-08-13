@@ -1,5 +1,7 @@
 a = int(input())
 b, c, d, e = list(map(int, input().split()))
 
-ans = 1 if a > b and a > c and a > d and a > e else 0
-print(ans)
+if a > b: print(1) else: print(0)
+if a > c: print(1) else: print(0)
+if a > d: print(1) else: print(0)
+if a > e: print(1) else: print(0)
