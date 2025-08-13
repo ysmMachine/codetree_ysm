@@ -1,5 +1,8 @@
-n = int(input())
+n = float(input())  
 
-if n >= 1.0: print("High")
-elif n >= 5.0: print("Middle")
-else: print("Low")
+if n >= 5.0:
+    print("Middle")
+elif n >= 1.0:
+    print("High")
+else:
+    print("Low")
