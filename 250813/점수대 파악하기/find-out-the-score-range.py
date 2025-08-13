@@ -3,6 +3,9 @@ score_li = list(map(int, input().split()))
 count_li = [0]*11
 
 for score in score_li:
+    if score == 0:
+        break
+        
     if score >= 10:
         count_li[score//10] += 1
 
