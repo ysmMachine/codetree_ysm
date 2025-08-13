@@ -5,5 +5,5 @@ _avg = _sum / len(li)
 _ans = _sum - _avg
 
 print(_sum)
-print(_avg)
+print(int(_avg))
 print(_ans)
