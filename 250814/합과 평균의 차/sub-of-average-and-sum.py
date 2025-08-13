@@ -6,4 +6,4 @@ _ans = _sum - _avg
 
 print(_sum)
 print(int(_avg))
-print(_ans)
+print(int(_ans))
