@@ -1,18 +1,14 @@
 M, D = map(int, input().split())
 
-# Please write your code here.
-def is_exsist(M, D):
-    if M > 12 and D > 31: return False
-
-    if M % 2 == 1 and D <= 31:
-        return True
-    elif M % 2 == 0 and M == 2 and D <= 28:
-        return True
-    elif M % 2 == 0 and D <= 30:
-        return True
-    else:
+def is_exist(M, D):
+    if M < 1 or M > 12 or D < 1:
         return False
+    
+    days_in_month = [0,
+        31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+    ]
+    
+    return D <= days_in_month[M]
 
-ans = "Yes" if is_exsist(M, D) else "No"
+ans = "Yes" if is_exist(M, D) else "No"
 print(ans)
-
