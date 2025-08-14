@@ -5,8 +5,8 @@ def print_square(n):
     num = 1
     for i in range(n):
         for j in range(n):
-            val = num % 9 if num > 9 else num
-            print(val, end=" ")
+            if num > 9: num = 1
+            print(num, end=" ")
             num += 1
         print()
 
