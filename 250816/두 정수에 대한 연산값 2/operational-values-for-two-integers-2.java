@@ -4,6 +4,9 @@ public class Main {
         if (arr[0] < arr[1]) {
             arr[0] += 10;
             arr[1] *= 2;
+        } else {
+            arr[0] *= 2;
+            arr[1] += 10;
         }
     }
 
