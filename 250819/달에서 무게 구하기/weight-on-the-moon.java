@@ -4,6 +4,6 @@ public class Main {
         int weight = 13;
         double ratio = 0.165;
 
-        System.out.printf("%.6f", weight * ratio);
+        System.out.printf(13 + " * " + "%.6f" + " = " + "%.6f", ratio, weight * ratio);
     }
 }
