@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static boolean isThree(int num) {
         while (num != 0) {
-            if (num % 10 == 3) return true;
+            if (num % 10 == 3 || num % 10 == 6 || num % 10 == 9) return true;
             num /= 10;
         }
         return false;
