@@ -1,4 +1,8 @@
-li = list(map(int, input().split()))
+li = []
+
+for i in range(5):
+    num = int(input())
+    li.append(num)
 
 isFlag = True
 
