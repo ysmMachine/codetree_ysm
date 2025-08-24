@@ -7,17 +7,19 @@ public class Main {
         String a = sc.next();
         String b = sc.next();
 
-        if (a.length() != b.length()) {
-            System.out.println(-1);
-            return;
+        boolean isFlag = true;
+
+        for (int i = 1; i <= a.length(); i++) {
+            String rotated = a.substring(a.length() - i) + a.substring(0, a.length() - i);
+
+            if (rotated.equals(b)) {
+                System.out.println(i);
+                isFlag = false;
+                break;
+            }
         }
 
-        String doubled = a + a;
-        int idx = doubled.indexOf(b);
-
-        if (idx == -1) 
+        if (isFlag)
             System.out.println(-1);
-        else 
-            System.out.println(idx);
     }
 }
