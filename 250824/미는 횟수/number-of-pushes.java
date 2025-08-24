@@ -7,29 +7,17 @@ public class Main {
         String a = sc.next();
         String b = sc.next();
 
-        int start = 1;
-        boolean isFlag = true;
-        
-        for (int i = 1; i <= a.length(); i++) {
-            StringBuilder temp = new StringBuilder();
-
-            for (int j = start; j < a.length(); j++) 
-                temp.append(a.charAt(j));
-            
-            for (int k = 0; k < start; k++)
-                temp.append(a.charAt(k));
-
-            start++;
-
-            if (temp.toString().equals(b)) {
-                System.out.println(i);
-                isFlag = false;
-                break;
-            }
+        if (a.length() != b.length()) {
+            System.out.println(-1);
+            return;
         }
 
-        if (isFlag)
+        String doubled = a + a;
+        int idx = doubled.indexOf(b);
+
+        if (idx == -1) 
             System.out.println(-1);
-        
+        else 
+            System.out.println(idx);
     }
 }
